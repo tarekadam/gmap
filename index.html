@@ -11,7 +11,8 @@
         $().ready(function () {
             console.log('start')
             var map = new google.maps.Map(document.getElementById("map"), {
-                center: {lat: -34.397, lng: 150.644}
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 2
             });
 
             var infowindow = new google.maps.InfoWindow({
@@ -19,8 +20,8 @@
             });
 
             let pinsets = [
-                /*'/one_source_of_pins.json',
-                '/another_source_of_pins.json'*/
+                '/one_source_of_pins.json',
+                '/another_source_of_pins.json'
             ];
 
             for (let i = 0; i < pinsets.length; i++) {
